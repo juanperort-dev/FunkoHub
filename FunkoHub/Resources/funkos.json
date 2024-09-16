@@ -1,0 +1,60 @@
+{
+  "numFunkos" : 8,
+  "funkos" : [
+    {
+      "name" : "Eren Jaeger",
+      "type" : "AOT",
+      "price" : 10.5600000000000001,
+      "date" : "10\/02\/2019"
+    },
+    {
+      "name" : "Luffy Gear 4",
+      "type" : "OP",
+      "price" : 5.5600000000000001,
+      "date" : "07\/02\/2019"
+    },
+    {
+      "name" : "Luffy Gear 5",
+      "type" : "OP",
+      "price" : 1.5600000000000001,
+      "date" : "07\/02\/2019"
+    },
+    {
+      "name" : "Luffy Gear 2",
+      "type" : "OP",
+      "price" : 1.5600000000000001,
+      "date" : "07\/02\/2019"
+    },
+    {
+      "name" : "Monkey D. Luffy",
+      "type" : "OP",
+      "price" : 20.5600000000000001,
+      "date" : "07\/02\/2019"
+    },
+    {
+      "name" : "Naruto",
+      "type" : "NRT",
+      "price" : 8.5600000000000001,
+      "date" : "07\/02\/2019"
+    },
+    {
+      "name" : "Nezuko",
+      "type" : "DS",
+      "price" : 2.5600000000000001,
+      "date" : "14\/02\/2019"
+    },
+    {
+      "name" : "Rengoku",
+      "type" : "DS",
+      "price" : 5.5600000000000001,
+      "date" : "20\/02\/2019"
+    },
+    {
+      "name" : "Goku",
+      "type" : "DB",
+      "price" : 3.5600000000000001,
+      "date" : "25\/02\/2019"
+    }
+  ],
+}
+
