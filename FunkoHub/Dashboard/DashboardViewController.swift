@@ -19,12 +19,15 @@ class DashboardViewController: UIViewController, DashboardPresenterDelegate {
     
     private var presenter: DashboardPresenter = DashboardPresenter()
     
+    // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: - Actions
     @IBAction func funkosButton(_ sender: UIButton) {
         navigateToFunkoList()
     }
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
@@ -53,6 +56,7 @@ class DashboardViewController: UIViewController, DashboardPresenterDelegate {
     
 }
 
+// MARK: - Delegates
 extension DashboardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

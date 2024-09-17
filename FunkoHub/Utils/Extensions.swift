@@ -8,6 +8,7 @@
 import Foundation
 
 extension Date {
+    
     func formatDate(format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  format
@@ -15,5 +16,4 @@ extension Date {
         let formattedDate = dateFormatter.string(from: self)
         return formattedDate.capitalized
     }
-    
 }

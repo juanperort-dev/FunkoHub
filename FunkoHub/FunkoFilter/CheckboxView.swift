@@ -12,6 +12,7 @@ class CheckboxView: UIView {
     var isSelected: Bool = false
     var typeText: String = .empty
 
+    // MARK: - Outlets
     @IBOutlet weak var checkbox: UIButton!
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var typeLabel: UILabel!
@@ -35,6 +36,7 @@ class CheckboxView: UIView {
         addSubview(view)
     }
 
+    // MARK: - Actions
     @IBAction func buttonAction(_ sender: Any) {
         isSelected.toggle()
         changeImageButton()

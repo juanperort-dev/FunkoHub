@@ -12,6 +12,7 @@ class FunkoListCell: UITableViewCell, UINavigationBarDelegate {
     
     static let id: String = "FunkoListCell"
     
+    // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

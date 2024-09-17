@@ -41,6 +41,7 @@ class FunkoFilterViewController: UIViewController, FunkoFilterViewControllerDele
     weak var delegate: FunkoDelegate?
     var presenter: FunkoFilterPresenterDelegate = FunkoFilterPresenter()
     
+    // MARK: - Outlets
     @IBOutlet weak var fromDatePicker: UIDatePicker!
     @IBOutlet weak var toDatePicker: UIDatePicker!
     @IBOutlet weak var selectedMinPriceLabel: UILabel!
@@ -50,6 +51,7 @@ class FunkoFilterViewController: UIViewController, FunkoFilterViewControllerDele
     @IBOutlet weak var priceSlider: UISlider!
     @IBOutlet weak var typesStackView: UIStackView!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +59,7 @@ class FunkoFilterViewController: UIViewController, FunkoFilterViewControllerDele
         presenter.setupView()
     }
     
+    // MARK: - Actions
     @IBAction func fromDatePickerAction(_ sender: Any) {
         guard let datePicker = sender as? UIDatePicker else { return }
         presenter.selectFromDate(datePicker.date)
