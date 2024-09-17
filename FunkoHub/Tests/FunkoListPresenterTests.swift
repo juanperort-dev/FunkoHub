@@ -28,6 +28,7 @@ class FunkoListPresenterTests: XCTestCase {
         var setupTableViewCalled = false
         var setupDefaultValueCalled = false
         var showTableViewCalled = false
+        var showDetailFunkoPopupCalled = false
         
         func navigateToFilter(defaultData: FunkoHub.KeyDataFunkos, filteredData: FunkoHub.KeyDataFunkos) {
             navigateToFilterCalled = true
@@ -51,6 +52,10 @@ class FunkoListPresenterTests: XCTestCase {
         
         func showTableView() {
             showTableViewCalled = true
+        }
+        
+        func showDetailFunkoPopup(funko: FunkoHub.Funko) {
+            showDetailFunkoPopupCalled = true
         }
     }
     
@@ -140,13 +145,14 @@ class FunkoListPresenterTests: XCTestCase {
         // Given
         let spy = FunkoListViewControllerSpy()
         sut.view = spy
+        let repo = FunkoNativeAPIRepositorySpy()
+        sut.repository = repo
         
         // When
+        sut.getDefaultValue()
         sut.didSelectRowAt(index: 0)
         
         // Then
-        XCTAssertTrue(spy.navigateToDetailCalled)
+        XCTAssertTrue(spy.showDetailFunkoPopupCalled)
     }
 }
-
-
