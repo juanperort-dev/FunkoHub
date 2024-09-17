@@ -18,12 +18,14 @@ protocol FunkoListPresenterDelegate: AnyObject {
 }
 
 class FunkoListViewController: UIViewController, FunkoListViewControllerDelegate {
-  
+    
+    // MARK: - Outlets
     @IBOutlet weak var labelEmptyList: UILabel!
     @IBOutlet public weak var tableView: UITableView!
     
     private let presenter: FunkoListPresenter = FunkoListPresenter()
-     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
@@ -33,6 +35,7 @@ class FunkoListViewController: UIViewController, FunkoListViewControllerDelegate
         navigationItem.backBarButtonItem = backBarButtonItem
     }
 
+    // MARK: - Actions
     @IBAction func backButtonAction(_ sender: Any) {
         presenter.backButtonAction()
     }
@@ -75,6 +78,7 @@ class FunkoListViewController: UIViewController, FunkoListViewControllerDelegate
     
 }
 
+// MARK: - Delegates
 extension FunkoListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

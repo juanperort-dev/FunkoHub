@@ -11,6 +11,7 @@ class FunkoCollectionViewCell: UICollectionViewCell {
     
     static let id: String = "FunkoCollectionViewCell"
     
+    // MARK: - Outlets
     @IBOutlet weak var image: UIImageView!
     
     func setupDataCell(_ funko: FunkoCollection) {

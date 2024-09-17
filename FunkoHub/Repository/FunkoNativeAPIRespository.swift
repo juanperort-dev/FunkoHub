@@ -10,6 +10,7 @@ import Alamofire
 
 class FunkoNativeAPIRespository: FunkoRepository {
     
+    // MARK: - Requests
     func getFunkos(completion: @escaping ([Funko]) -> Void) {
         AF.request(Constants.url.funkoList, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response { response in
             switch response.result {
@@ -35,6 +36,7 @@ class FunkoNativeAPIRespository: FunkoRepository {
         }
     }
     
+    // MARK: - Managers Results
     func manageSuccessFunkos(data: Data?, completion: @escaping ([Funko]) -> Void) {
         do {
             let decoder = JSONDecoder()
